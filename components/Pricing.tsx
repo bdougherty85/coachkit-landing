@@ -158,7 +158,7 @@ export default function Pricing() {
         </div>
 
         <p className="mt-12 text-center text-sm text-gray-500">
-          All plans include a 14-day money-back guarantee
+          All plans include a 14-day free trial. No credit card required.
         </p>
       </div>
     </section>
