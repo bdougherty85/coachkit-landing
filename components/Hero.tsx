@@ -7,13 +7,13 @@ export default function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Coach your team,{" "}
-              <span className="text-orange-500">not a spreadsheet</span>
+              Make being a parent coach{" "}
+              <span className="text-orange-500">not suck!</span>
             </h1>
             <p className="mt-6 text-lg text-gray-600">
               CoachKit tracks playing time automatically, manages substitutions with a tap,
-              and keeps parents in the loop. Spend less time on logistics and more time
-              developing young athletes.
+              and handles parent RSVPs and snack signups so you can stop managing group chats
+              and start actually coaching.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
