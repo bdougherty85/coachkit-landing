@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -60,27 +58,6 @@ const tiers = [
 ];
 
 export default function Pricing() {
-  const [loading, setLoading] = useState(false);
-
-  const handleCheckout = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      }
-    } catch (error) {
-      console.error("Checkout error:", error);
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section id="pricing" className="py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -162,13 +139,12 @@ export default function Pricing() {
               </ul>
 
               {tier.available ? (
-                <button
-                  onClick={handleCheckout}
-                  disabled={loading}
-                  className="mt-8 w-full rounded-full bg-orange-500 py-3 text-lg font-semibold text-white shadow-lg transition hover:bg-orange-600 disabled:opacity-50"
+                <Link
+                  href="/interest"
+                  className="mt-8 block w-full rounded-full bg-orange-500 py-3 text-center text-lg font-semibold text-white shadow-lg transition hover:bg-orange-600"
                 >
-                  {loading ? "Loading..." : tier.cta}
-                </button>
+                  {tier.cta}
+                </Link>
               ) : (
                 <a
                   href={`mailto:btricer@gmail.com?subject=CoachKit%20-%20Interest%20in%20${encodeURIComponent(tier.name)}%20Plan`}
