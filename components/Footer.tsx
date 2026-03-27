@@ -10,13 +10,13 @@ export default function Footer() {
             <span className="text-xl font-bold text-white">CoachKit</span>
           </div>
           <div className="flex gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white">
+            <a href="/privacy" className="hover:text-white">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="/terms" className="hover:text-white">
               Terms of Service
             </a>
-            <a href="mailto:support@coachkit.app" className="hover:text-white">
+            <a href="mailto:btricer@gmail.com" className="hover:text-white">
               Contact
             </a>
           </div>
